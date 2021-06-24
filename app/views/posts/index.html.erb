@@ -5,6 +5,7 @@
     </div>
     <div class="header-center">
       <div class="login" id="login-btn">ログイン</div>
+      <div class="signup" id="signup-btn">新規登録</div>
     </div>
     <div class="header-right">
       <ul class="contents">
@@ -14,5 +15,40 @@
       </ul>
     </div>
 </header>
-<div></div>
-<footer></footer>
+  <div class="signup-modal-wrapper" id="signup-modal">
+    <div class="modal">
+      <div class="close-modal">
+        <i class="fa fa-2x fa-times">X</i>
+      </div>
+      <div id="signup-form">
+        <h2>Emailで新規登録</h2>
+        <form action="#">
+          <input class="form-control" type="text" placeholder="メールアドレス">
+          <input class="form-control" type="password" placeholder="パスワード">
+          <div id="submit-btn">新規登録</div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="login-modal-wrapper" id="login-modal">
+    <div class="modal">
+      <div class="close-modal">
+        <i class="fa fa-2x fa-times">X</i>
+      </div>
+      <div id="login-form">
+        <h2>Emailログイン</h2>
+        <form action="#">
+          <input class="form-control" type="text" placeholder="メールアドレス">
+          <input class="form-control" type="password" placeholder="パスワード">
+          <div id="submit-btn">ログイン</div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="main-wrapper">
+  <div class="side">サイド</div>
+  <div class="main">メイン</div>
+</div>
+<footer>
+  <div class="footer-bar">フッター</div>
+</footer>

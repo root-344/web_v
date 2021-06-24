@@ -3,6 +3,8 @@
 }
 
 body {
+  width: 100%;
+  height: 100%;
   font-size: 14px;
   color: #333;
   margin: 0 auto;
@@ -21,31 +23,42 @@ ul, li {
 .header-bar {
   height: 70px;
   display: flex;
-  background-color: red;
+  border: 1px solid black;
+  background-color: brown;
 }
 
 .header-left {
   width: 20%;
-  background-color: rosybrown;
+  border-right: 1px solid black;
 }
 
 .header-center {
-  width: 20%;
-  background-color: blue;
+  width: 30%;
+  display: flex;
 }
 
 .login {
   font-size: large;
   line-height: 65px;
   padding: 0 25px;
-  color: white;
+  color: black;
   cursor: pointer;
   display: block;
+  border: 1px solid lightgoldenrodyellow;
+}
+
+.signup {
+  font-size: large;
+  line-height: 65px;
+  padding: 0 25px;
+  color: black;
+  cursor: pointer;
+  display: block;
+  border: 1px solid lightgoldenrodyellow;
 }
 
 .header-right {
-  width: 60%;
-  background-color: sandybrown;
+  width: 50%;
 }
 
 .contents {
@@ -55,7 +68,6 @@ ul, li {
   text-align: center;
   width: 100%;
   height: 100%;
-  background-color: seagreen;
 }
 
 .content {
@@ -63,5 +75,97 @@ ul, li {
   height: 30%;
   list-style: none;
   border: 1px solid black;
-  background-color: slateblue;
+}
+
+.main-wrapper {
+  display: flex;
+  width: 100%;
+  height: 800px;
+}
+
+.side {
+  width: 20%;
+  height: 100%;
+  border-right: 1px solid black;
+  background-color: chocolate;
+}
+
+.main {
+  width: 80%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  background-blend-mode: lighten;
+  background-image: url("https://i.gyazo.com/b35a7aa11dd531a45269f5e791edf590.jpg");
+  background-size: cover;
+}
+
+.login-modal-wrapper, .signup-modal-wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+
+.modal {
+  position: absolute;
+  top: 20%;
+  left: 34%;
+  background-color: lightgoldenrodyellow;
+  padding: 20px 0 40px;
+  border-radius: 10px;
+  width: 450px;
+  height: auto;
+  text-align: center;
+}
+
+.fa-times {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: gray;
+  cursor: pointer;
+}
+
+#signup-form, #login-form {
+  width: 100%;
+}
+
+#signup-form h2, #login-form h2 {
+  color: #5f5d60;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+#signup-form input, #login-form input {
+  width: 320px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  padding: 12px 12px;
+  border: 1px solid #d0d5d8;
+  border-radius: 5px;
+}
+
+#submit-btn {
+  display: inline-block;
+  padding: 14px 140px;
+  background-color: #5dca88;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.fa {
+  margin-right: 5px;
+}
+
+.footer-bar {
+  height: 10%;
+  border: 1px solid black;
+  background-color: rgba(0, 0, 0, 0.6);
 }
