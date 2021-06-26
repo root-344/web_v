@@ -1,0 +1,163 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  color: #333;
+  margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6,p {
+  padding: 10px 0;
+  margin: 0;
+}
+ul,li {
+  padding: 0;
+  margin: 0;
+}
+//header部分
+.header-bar {
+  height: 70px;
+  display: flex;
+  border: 1px solid black;
+  background-color: brown;
+}
+  .header-left {
+    width: 20%;
+    border-right:1px solid black;
+  }
+  .header-center {
+    width: 30%;
+    display: flex;
+  }
+    .login {
+      font-size: large;
+      line-height: 65px;
+      padding: 0 25px;
+      color:black;
+      cursor: pointer;
+      display: block;
+      border: 1px solid lightgoldenrodyellow;
+    }
+    .signup {
+      font-size: large;
+      line-height: 65px;
+      padding: 0 25px;
+      color: black;
+      cursor: pointer;
+      display: block;
+      border: 1px solid lightgoldenrodyellow;
+    }
+  .header-right {
+    width: 50%;
+  } 
+    .contents {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+    }
+      .content {
+        width: 100px;
+        height: 30%;
+        list-style: none;
+        border: 1px solid black;
+      }
+// メイン
+.main-wrapper {
+  display: flex;
+  width: 100%;
+  height: 800px;
+
+}
+  .side {
+    width: 20%;
+    height: 100%;
+    border-right:1px solid black;
+    background-color: chocolate;
+  }
+  .main {
+    width: 80%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    background-blend-mode: lighten;
+    background-image: url('https://i.gyazo.com/b35a7aa11dd531a45269f5e791edf590.jpg');
+    background-size:cover;
+  }
+
+// モーダル
+.login-modal-wrapper, .signup-modal-wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+
+.modal {
+  position: absolute;
+  top: 20%;
+  left: 34%;
+  background-color: lightgoldenrodyellow;
+  padding: 20px 0 40px;
+  border-radius: 10px;
+  width: 450px;
+  height: auto;
+  text-align: center;
+}
+
+.fa-times {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: rgba(128, 128, 128, 1);
+  cursor: pointer;
+}
+
+#signup-form, #login-form {
+  width: 100%;
+}
+
+#signup-form h2, #login-form h2 {
+  color: #5f5d60;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+#signup-form input, #login-form input {
+  width: 320px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  padding: 12px 12px;
+  border: 1px solid #d0d5d8;
+  border-radius: 5px;
+}
+
+#submit-btn {
+  display: inline-block;
+  padding: 14px 140px;
+  background-color: #5dca88;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  margin: 10px auto;
+  cursor: pointer;
+}
+.fa {
+  margin-right: 5px;
+}
+// フッター
+.footer-bar {
+  height: 10%;
+  border:1px solid black ;
+  background-color: rgba(0, 0, 0, 0.6);
+}
