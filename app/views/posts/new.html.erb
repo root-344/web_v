@@ -1,0 +1,11 @@
+<div class="new-wrapper">
+    <h1 class="form-heading">投稿する</h1>
+    <%= form_tag("/posts/create") do %>
+      <div class="form">
+        <div class="form-body">
+          <textarea name="content" class="content-area"></textarea>
+          <input type="submit" value="投稿" class="p-btn">
+        </div>
+      </div>
+    <% end %>
+</div>

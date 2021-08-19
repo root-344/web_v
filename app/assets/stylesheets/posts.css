@@ -37,7 +37,7 @@ ul, li {
   display: flex;
 }
 
-.login {
+.header-center .login {
   font-size: large;
   line-height: 65px;
   padding: 0 25px;
@@ -47,7 +47,17 @@ ul, li {
   border: 1px solid lightgoldenrodyellow;
 }
 
-.signup {
+.header-center .signup {
+  font-size: large;
+  line-height: 65px;
+  padding: 0 25px;
+  color: black;
+  cursor: pointer;
+  display: block;
+  border: 1px solid lightgoldenrodyellow;
+}
+
+.header-center .new-post {
   font-size: large;
   line-height: 65px;
   padding: 0 25px;
@@ -97,6 +107,19 @@ ul, li {
   background-blend-mode: lighten;
   background-image: url("https://i.gyazo.com/b35a7aa11dd531a45269f5e791edf590.jpg");
   background-size: cover;
+}
+
+.main .main-container {
+  width: 30%;
+  height: 30%;
+  margin: 10px 0 0 10px;
+  background-image: url("https://i.gyazo.com/f763132fdbbe70775133bf0c6426d2e2.png");
+  background-size: cover;
+}
+
+.main .main-container .text {
+  padding-left: 5px;
+  font-size: 18px;
 }
 
 .login-modal-wrapper, .signup-modal-wrapper {
@@ -162,6 +185,42 @@ ul, li {
 
 .fa {
   margin-right: 5px;
+}
+
+.new-wrapper {
+  width: 80%;
+  height: 100%;
+  background-image: url("https://i.gyazo.com/b35a7aa11dd531a45269f5e791edf590.jpg");
+}
+
+.new-wrapper .form-heading {
+  height: 150px;
+  text-align: center;
+  padding-top: 40px;
+  font-size: 30px;
+}
+
+.new-wrapper .form {
+  width: 100%;
+  height: 500px;
+}
+
+.new-wrapper .form .form-body {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.new-wrapper .form .form-body .content-area {
+  width: 90%;
+  height: 60%;
+}
+
+.new-wrapper .form .form-body .p-btn {
+  width: 10%;
+  height: 10%;
+  margin-top: 20px;
+  font-size: 20px;
 }
 
 .footer-bar {
