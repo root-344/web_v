@@ -47,7 +47,11 @@
   </div>
   <div class="main-wrapper">
   <div class="side">サイド</div>
-  <div class="main">メイン</div>
+  <% @posts.each do |post|%>
+  <div class="main">
+  <%= post.content %>
+  </div>
+  <% end %>
 </div>
 <footer>
   <div class="footer-bar">フッター</div>
