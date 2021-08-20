@@ -1,0 +1,19 @@
+<div class="show-wrapper">
+  <div class="show-container">
+    <div class="show-content">
+      <p class="post-content">
+        <%= @post.content %>
+      </p>
+      
+      <div class="post-time">
+        <%= @post.created_at %>
+      </div>
+      <div class="edit-btn">
+        <%= link_to "編集", "/posts/#{@post.id}/edit/" %>
+      </div>
+      <div class="destroy-btn">
+        <%= link_to "削除", "/posts/#{@post.id}/destroy/", method: "post" %>
+      </div>
+    </div>
+  </div>
+</div>

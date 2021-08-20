@@ -107,6 +107,7 @@ ul, li {
   background-blend-mode: lighten;
   background-image: url("https://i.gyazo.com/b35a7aa11dd531a45269f5e791edf590.jpg");
   background-size: cover;
+  overflow: auto;
 }
 
 .main .main-container {
@@ -115,6 +116,8 @@ ul, li {
   margin: 10px 0 0 10px;
   background-image: url("https://i.gyazo.com/f763132fdbbe70775133bf0c6426d2e2.png");
   background-size: cover;
+  overflow: auto;
+  flex-wrap: wrap;
 }
 
 .main .main-container .text {
@@ -187,40 +190,80 @@ ul, li {
   margin-right: 5px;
 }
 
-.new-wrapper {
+.new-wrapper, .show-wrapper {
   width: 80%;
   height: 100%;
   background-image: url("https://i.gyazo.com/b35a7aa11dd531a45269f5e791edf590.jpg");
 }
 
-.new-wrapper .form-heading {
+.new-wrapper .form-heading, .show-wrapper .form-heading {
   height: 150px;
   text-align: center;
   padding-top: 40px;
   font-size: 30px;
 }
 
-.new-wrapper .form {
+.new-wrapper .form, .show-wrapper .form {
   width: 100%;
   height: 500px;
 }
 
-.new-wrapper .form .form-body {
+.new-wrapper .form .form-body, .show-wrapper .form .form-body {
   width: 100%;
   height: 100%;
   text-align: center;
 }
 
-.new-wrapper .form .form-body .content-area {
+.new-wrapper .form .form-body .content-area, .show-wrapper .form .form-body .content-area {
   width: 90%;
   height: 60%;
 }
 
-.new-wrapper .form .form-body .p-btn {
+.new-wrapper .form .form-body .p-btn, .show-wrapper .form .form-body .p-btn {
   width: 10%;
   height: 10%;
   margin-top: 20px;
   font-size: 20px;
+}
+
+.new-wrapper .show-container, .show-wrapper .show-container {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-wrapper .show-container .show-content, .show-wrapper .show-container .show-content {
+  width: 80%;
+  height: 500px;
+  padding: 10px;
+  background-color: blanchedalmond;
+  overflow-wrap: normal;
+}
+
+.new-wrapper .show-container .show-content .post-content, .show-wrapper .show-container .show-content .post-content {
+  width: 100%;
+  height: 70%;
+  font-size: 20px;
+}
+
+.new-wrapper .show-container .show-content .post-time, .show-wrapper .show-container .show-content .post-time {
+  width: 100%;
+  height: 10%;
+  font-size: 20px;
+}
+
+.new-wrapper .show-container .show-content .edit-btn, .show-wrapper .show-container .show-content .edit-btn {
+  width: 10%;
+  height: 5%;
+  border: 1px solid black;
+}
+
+.new-wrapper .show-container .show-content .destroy-btn, .show-wrapper .show-container .show-content .destroy-btn {
+  width: 10%;
+  height: 5%;
+  border: 1px solid black;
 }
 
 .footer-bar {
