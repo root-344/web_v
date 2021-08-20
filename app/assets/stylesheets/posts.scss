@@ -100,6 +100,7 @@ ul,li {
     background-blend-mode: lighten;
     background-image: url('https://i.gyazo.com/b35a7aa11dd531a45269f5e791edf590.jpg');
     background-size:cover;
+    overflow: auto;
 
     .main-container {
       width: 30%;
@@ -107,6 +108,8 @@ ul,li {
       margin: 10px 0 0 10px;
       background-image: url("https://i.gyazo.com/f763132fdbbe70775133bf0c6426d2e2.png");
       background-size: cover;
+      overflow: auto;
+      flex-wrap: wrap;
 
       .text {
         padding-left: 5px;
@@ -180,7 +183,7 @@ ul,li {
   margin-right: 5px;
 }
 //新規投稿ページ
-.new-wrapper {
+.new-wrapper, .show-wrapper{
   width: 80%;
   height: 100%;
   background-image: url("https://i.gyazo.com/b35a7aa11dd531a45269f5e791edf590.jpg");
@@ -209,13 +212,50 @@ ul,li {
        height: 10%;
        margin-top: 20px;
        font-size: 20px;
-       
-
      }
    }
-
   }
 
+  //詳細画面部分
+  .show-container {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+ 
+    .show-content {
+      width: 80%;
+      height: 500px;
+      padding: 10px;
+      background-color: blanchedalmond;
+      overflow-wrap: normal;
+
+      .post-content {
+        width: 100%;
+        height: 70%;
+        font-size: 20px;
+      }
+  
+      .post-time {
+        width: 100%;
+        height: 10%;
+        font-size: 20px;
+     }
+
+     .edit-btn {
+       width: 10%;
+       height: 5%;
+       border: 1px solid black;
+     }
+     .destroy-btn {
+      width: 10%;
+      height: 5%;
+      border: 1px solid black;
+     }
+    }
+  }
 }
 // フッター
 .footer-bar {

@@ -31,7 +31,9 @@
 <div class="main">
   <% @posts.each do |post|%>
     <div class="main-container">
-      <p class="text"> <%= post.content %> </p>
+      <p>
+        <%= link_to post.content, "/posts/#{post.id}", class: "text" %> 
+      </p>
     </div>
   <% end %>
 </div>
