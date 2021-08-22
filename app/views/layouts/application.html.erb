@@ -15,22 +15,14 @@
         <div class="header-left">
           <h1 id="logo">###</h1>
         </div>
-        <div class="header-center">
+        <div class="header-right">
           <div class="login" id="login-btn">ログイン</div>
           <div class="signup" id="signup-btn">新規登録</div>
           <%= link_to "新規投稿", "/posts/new/", class: "new-post" %>
-          <%# <div class="new-post">新規投稿</div> %>
-        </div>
-        <div class="header-right">
-          <ul class="contents">
-            <li class="content">##</li>
-            <li class="content">##</li>
-            <li class="content">##</li>
-          </ul>
         </div>
     </header>
     <div class="main-wrapper">
-      <div class="side">サイド</div>
+      <div class="side">登録名</div>
       <%= yield %>
       <script src="script.js"></script>
     </div>

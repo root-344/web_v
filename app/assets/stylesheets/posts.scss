@@ -28,44 +28,46 @@ ul,li {
 }
   .header-left {
     width: 20%;
-    border-right:1px solid black;
   }
-  .header-center {
-    width: 30%;
+  .header-right {
+    width: 80%;
     display: flex;
   
     .login {
+      width: calc(100% / 3);
+      height: 100%;
       font-size: large;
       line-height: 65px;
       padding: 0 25px;
       color:black;
       cursor: pointer;
       display: block;
-      border: 1px solid lightgoldenrodyellow;
     }
     .signup {
+      width: calc(100% / 3);
+      height: 100%;
       font-size: large;
       line-height: 65px;
       padding: 0 25px;
       color: black;
       cursor: pointer;
       display: block;
-      border: 1px solid lightgoldenrodyellow;
     }
     .new-post {
+      width: calc(100% / 3);
+      height: 100%;
       font-size: large;
       line-height: 65px;
       padding: 0 25px;
       color: black;
       cursor: pointer;
       display: block;
-      border: 1px solid lightgoldenrodyellow;
     }
   }
 
-  .header-right {
-    width: 50%;
-  } 
+  // .header-right {
+  //   width: 50%;
+  // } 
     .contents {
       display: flex;
       justify-content: space-around;
