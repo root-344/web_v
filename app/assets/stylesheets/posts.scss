@@ -34,7 +34,7 @@ ul,li {
     display: flex;
   
     .login {
-      width: calc(100% / 3);
+      width: calc(100% / 4);
       height: 100%;
       font-size: large;
       line-height: 65px;
@@ -44,7 +44,7 @@ ul,li {
       display: block;
     }
     .signup {
-      width: calc(100% / 3);
+      width: calc(100% / 4);
       height: 100%;
       font-size: large;
       line-height: 65px;
@@ -53,8 +53,20 @@ ul,li {
       cursor: pointer;
       display: block;
     }
+
+    .post-stock {
+      width: calc(100% / 4);
+      height: 100%;
+      font-size: large;
+      line-height: 65px;
+      padding: 0 25px;
+      color: black;
+      cursor: pointer;
+      display: block;
+    }
+    
     .new-post {
-      width: calc(100% / 3);
+      width: calc(100% / 4);
       height: 100%;
       font-size: large;
       line-height: 65px;
