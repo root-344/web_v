@@ -2,10 +2,12 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    @users = User.all
   end
 
   def new
     @post = Post.new
+    @users = User.all
   end
 
   def create
@@ -20,10 +22,13 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by(id: params[:id])
+    @users = User.all
+
   end
 
   def edit
     @post = Post.find_by(id: params[:id])
+    @users = User.all
   end
 
   def update

@@ -1,0 +1,61 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/* users/index ================================ */
+
+.side {
+  width: 20%;
+  height: 100%;
+  border-right:1px solid black;
+  background-color: chocolate;
+  overflow: auto;
+
+  .users-heading {
+    width: 100%;
+    height: 8%;
+    text-align: center;
+    margin: 10px 0 0;
+    font-size: 20px;
+    color: black;
+  }
+
+  .users-containers {
+    width: 100%;
+    height: 92%;  
+    
+
+    .users-container {
+      width: 100%;
+      height: 5%;
+      margin: 5px 0;
+
+      .text {
+        padding-left: 5px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.user-show-wrapper {
+  width: 80%;
+  height: 100%;
+  background-image: url('https://i.gyazo.com/b35a7aa11dd531a45269f5e791edf590.jpg');
+  background-size:cover;
+
+
+  .user-show-container {
+    width: 60%;
+    height: 50%;
+    margin: 100px auto;
+    background-color: blanchedalmond;
+    border: 1px solid black;
+    border-radius: 50px;
+    
+    .user {
+      text-align: center;
+      padding: 100px;
+    }
+
+  }
+}

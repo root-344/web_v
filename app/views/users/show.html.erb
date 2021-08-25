@@ -1,0 +1,20 @@
+<div class="side">
+    <div class="users-heading">ユーザー一覧</div>
+    <div class="users-containers">
+      <% @users.each do |user|%>
+        <div class="users-container">
+          <p>
+            <%= link_to user.name, "/users/#{user.id}", class: "text" %> 
+          </p>
+        </div>
+      <% end %>
+    </div>
+</div>
+<div class="user-show-wrapper">
+  <div class="user-show-container">
+    <div class="user">
+      <h2><%= @user.name %></h2>
+      <p><%= @user.email %></p>
+    </div>
+  </div>
+</div>
