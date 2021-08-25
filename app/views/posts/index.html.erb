@@ -28,6 +28,19 @@
     </div>
   </div>
 </div>
+<div class="side">
+    <div class="users-heading">ユーザー一覧</div>
+    <div class="users-containers">
+      <% @users.each do |user|%>
+        <div class="users-container">
+          <p>
+            <%= link_to user.name, "/users/#{user.id}", class: "text" %> 
+          </p>
+        </div>
+      <% end %>
+    </div>
+</div>
+
 <div class="main">
   <% @posts.each do |post|%>
     <div class="main-container">

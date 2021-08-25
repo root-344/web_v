@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/index'
+  get 'users/:id' => 'users#show'
   get "posts/index" => "posts#index"
   root to: 'posts#index'
   resources :posts
