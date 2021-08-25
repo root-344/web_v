@@ -77,23 +77,37 @@ ul,li {
     }
   }
 
-  // .header-right {
-  //   width: 50%;
-  // } 
-    .contents {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      text-align: center;
-      width: 100%;
-      height: 100%;
-    }
-      .content {
-        width: 100px;
-        height: 30%;
-        list-style: none;
-        border: 1px solid black;
-      }
+//flash部分
+.flash {
+  width: 80%;
+  height: 5vh;
+  padding: 10px 0;
+  color: white;
+  background: rgba(251, 170, 88, 0.7);
+  text-align: center;
+  position: absolute;
+  top: 70px;
+  left: 20%;
+  z-index: 10;
+  border-radius: 0 0 2px 2px;
+  font-size: 14px;
+}
+
+.form-error {
+  width: 80%;
+  height: 5vh;
+  padding: 10px 0;
+  color: white;
+  background: rgba(251, 170, 88, 0.7);
+  text-align: center;
+  position: absolute;
+  top: 70px;
+  z-index: 10;
+  border-radius: 0 0 2px 2px;
+  font-size: 14px;
+
+}
+    
 // メイン //
 .main-wrapper {
   display: flex;
@@ -115,15 +129,17 @@ ul,li {
     background-image: url('https://i.gyazo.com/b35a7aa11dd531a45269f5e791edf590.jpg');
     background-size:cover;
     overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+
 
     .main-container {
       width: 30%;
       height: 30%;
-      margin: 10px 0 0 10px;
+      margin: 50px 0 0 10px;
       background-image: url("https://i.gyazo.com/f763132fdbbe70775133bf0c6426d2e2.png");
       background-size: cover;
       overflow: auto;
-      flex-wrap: wrap;
 
       .text {
         padding-left: 5px;
