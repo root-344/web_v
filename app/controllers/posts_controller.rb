@@ -10,8 +10,12 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(content: params[:content])
-    @post.save
-    redirect_to root_path
+    if @post.save
+      flash[:notice] = "投稿を作成しました。画面をクリックすると消えます。"
+      redirect_to root_path
+    else
+      render("posts/new")
+    end
   end
 
   def show
@@ -25,13 +29,21 @@ class PostsController < ApplicationController
   def update
     @post = Post.find_by(id: params[:id])
     @post.content = params[:content]
-    @post.save
-    redirect_to root_path
+    if @post.save
+      flash[:notice] = "内容を変更しました。画面をクリックすると消えます。"
+      redirect_to root_path      
+    else
+      render("posts/edit")
+    end
   end
 
   def destroy
     @post = Post.find_by(id: params[:id])
-    @post.destroy
-    redirect_to root_path
+    if @post.destroy
+      flash[:notice] = "投稿を削除しました。画面をクリックすると消えます。"
+      redirect_to root_path
+    else
+      render("posts/edit")
+    end
   end
 end

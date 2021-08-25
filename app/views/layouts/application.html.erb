@@ -22,6 +22,13 @@
           <%= link_to "新規投稿", "/posts/new/", class: "new-post" %>
         </div>
     </header>
+    <%# 新規投稿、編集が成功した時の表示 %>
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+
     <div class="main-wrapper">
       <div class="side">登録名</div>
       <%= yield %>
