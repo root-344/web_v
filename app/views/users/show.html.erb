@@ -15,6 +15,7 @@
     <div class="user">
       <h2><%= @user.name %></h2>
       <p><%= @user.email %></p>
+      <%= link_to "編集", "/users/#{@user.id}/edit" %>
     </div>
   </div>
 </div>
