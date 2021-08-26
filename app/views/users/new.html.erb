@@ -1,0 +1,38 @@
+
+<div class="side">
+    <div class="users-heading">ユーザー一覧</div>
+    <div class="users-containers">
+      <% @users.each do |user|%>
+        <div class="users-container">
+          <p>
+            <%= link_to user.name, "/users/#{user.id}", class: "text" %> 
+          </p>
+        </div>
+      <% end %>
+    </div>
+</div>
+<div class="main">
+  <div class="signup-modal-wrapper" id="signup-modal">
+    <div class="modal">
+      <div class="close-modal">
+        <i class="fa fa-2x fa-times">X</i>
+      </div>
+      <div id="signup-form">
+        <h2>新規登録</h2>
+        <% @user.errors.full_messages.each do |message| %>
+          <div class="form-error">
+            <%= message %>
+          </div>
+        <% end %>
+        <%= form_tag("/users/create") do %>
+          <input name="name"class="form-control" type="text" placeholder="登録名">
+          <input name="email" class="form-control" type="text" placeholder="メールアドレス">
+          <input name="password" class="form-control" type="password" placeholder="パスワード">
+          <input type="submit" value="新規登録" id="submit-btn">
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+</div>
+
