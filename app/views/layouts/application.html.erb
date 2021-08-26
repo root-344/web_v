@@ -17,7 +17,7 @@
         </div>
         <div class="header-right">
           <div class="login" id="login-btn">ログイン</div>
-          <div class="signup" id="signup-btn">新規登録</div>
+          <%= link_to "新規登録", "/signup", class: "signup", id: "signup-btn" %>
           <%= link_to "投稿一覧", "/posts/index", class: "post-stock" %>
           <%= link_to "新規投稿", "/posts/new/", class: "new-post" %>
         </div>

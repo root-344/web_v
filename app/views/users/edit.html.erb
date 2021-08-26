@@ -1,0 +1,33 @@
+<div class="side">
+    <div class="users-heading">ユーザー一覧</div>
+    <div class="users-containers">
+      <% @users.each do |user|%>
+        <div class="users-container">
+          <p>
+            <%= link_to user.name, "/users/#{user.id}", class: "text" %> 
+          </p>
+        </div>
+      <% end %>
+    </div>
+</div>
+<div class="user-edit-wrapper">
+    <h1 class="edit-form-heading">編集する</h1>
+      <div class="edit-form">
+        <div class="edit-form-body">
+              <% @user.errors.full_messages.each do |message| %>
+                <div class="form-error">
+                  <%= message %>
+                </div>
+              <% end %>
+          <%= form_tag("/users/#{@user.id}/update/", {method: "post"}) do %>
+              <P class="user-states">ユーザー名</p>
+              <input name="name" type="text" class="form-control" value="<%= @user.name %>">
+              <P class="user-states">メールアドレス</p>
+              <input name="email" type="text" class="form-control" value="<%= @user.email %>">
+              <p class="user-states">パスワード</p>
+              <input name="password" type="password" class="form-control" value="<%= @user.password %>">
+              <input type="submit" value="投稿" class="p-btn">
+          <% end %>
+        </div>
+      </div>
+</div>
