@@ -36,7 +36,29 @@ ul, li {
   display: flex;
 }
 
+.header-right .user-name {
+  width: calc(100% / 4);
+  height: 100%;
+  font-size: large;
+  line-height: 65px;
+  padding: 0 25px;
+  color: black;
+  cursor: pointer;
+  display: block;
+}
+
 .header-right .login {
+  width: calc(100% / 4);
+  height: 100%;
+  font-size: large;
+  line-height: 65px;
+  padding: 0 25px;
+  color: black;
+  cursor: pointer;
+  display: block;
+}
+
+.header-right .logout {
   width: calc(100% / 4);
   height: 100%;
   font-size: large;
