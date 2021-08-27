@@ -16,10 +16,17 @@
           <h1 id="logo">###</h1>
         </div>
         <div class="header-right">
-          <div class="login" id="login-btn">ログイン</div>
-          <%= link_to "新規登録", "/signup", class: "signup", id: "signup-btn" %>
-          <%= link_to "投稿一覧", "/posts/index", class: "post-stock" %>
-          <%= link_to "新規投稿", "/posts/new/", class: "new-post" %>
+          <% if @current_user %>
+            <%= link_to @current_user.name, "/users/#{@current_user.id}", class: "user-name", id: "name-btn" %>
+            <%= link_to "ログアウト", "/logout", class: "logout", id: "logout-btn", method: :post %>
+            <%= link_to "投稿一覧", "/posts/index", class: "post-stock" %>
+            <%= link_to "新規投稿", "/posts/new/", class: "new-post" %>
+          <% else %>
+            <%= link_to "ログイン", "/login", class: "login", id: "login-btn" %>
+            <%= link_to "新規登録", "/signup", class: "signup", id: "signup-btn" %>
+            <%= link_to "投稿一覧", "/posts/index", class: "post-stock" %>
+          <% end %>
+
         </div>
     </header>
     <%# 新規投稿、編集が成功した時の表示 %>

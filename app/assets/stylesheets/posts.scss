@@ -32,6 +32,17 @@ ul,li {
   .header-right {
     width: 80%;
     display: flex;
+
+    .user-name {
+      width: calc(100% / 4);
+      height: 100%;
+      font-size: large;
+      line-height: 65px;
+      padding: 0 25px;
+      color:black;
+      cursor: pointer;
+      display: block;
+    }
   
     .login {
       width: calc(100% / 4);
@@ -42,6 +53,18 @@ ul,li {
       color:black;
       cursor: pointer;
       display: block;
+    }
+
+    .logout {
+      width: calc(100% / 4);
+      height: 100%;
+      font-size: large;
+      line-height: 65px;
+      padding: 0 25px;
+      color:black;
+      cursor: pointer;
+      display: block;
+
     }
     .signup {
       width: calc(100% / 4);

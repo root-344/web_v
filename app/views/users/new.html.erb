@@ -25,9 +25,9 @@
           </div>
         <% end %>
         <%= form_tag("/users/create") do %>
-          <input name="name" class="form-control" type="text" placeholder="登録名">
-          <input name="email" class="form-control" type="text" placeholder="メールアドレス">
-          <input name="password" class="form-control" type="password" placeholder="パスワード">
+          <input name="name" class="form-control" type="text" placeholder="登録名" value="<%= @user.name %>">
+          <input name="email" class="form-control" type="text" placeholder="メールアドレス" value="<%= @user.email %>">
+          <input name="password" class="form-control" type="password" placeholder="パスワード" value="<%= @user.password %>">
           <input type="submit" value="新規登録" id="submit-btn">
         <% end %>
       </div>
