@@ -37,6 +37,7 @@
   height: 100%;
   background-image: url("https://i.gyazo.com/b35a7aa11dd531a45269f5e791edf590.jpg");
   background-size: cover;
+  overflow: auto;
 }
 
 .user-show-wrapper .user-show-container, .user-edit-wrapper .user-show-container {
@@ -51,6 +52,20 @@
 .user-show-wrapper .user-show-container .user, .user-edit-wrapper .user-show-container .user {
   text-align: center;
   padding: 100px;
+}
+
+.user-show-wrapper .post-containers, .user-edit-wrapper .post-containers {
+  width: 60%;
+  height: 30%;
+  margin: 0 auto 20px;
+}
+
+.user-show-wrapper .post-containers .post-container, .user-edit-wrapper .post-containers .post-container {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  background-color: wheat;
+  border-radius: 20px;
 }
 
 .user-show-wrapper .edit-form-heading, .user-edit-wrapper .edit-form-heading {

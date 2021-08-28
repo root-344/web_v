@@ -20,4 +20,17 @@
       <% end %>
     </div>
   </div>
+  <% @user.posts.each do |post|%>
+    <div class="post-containers">
+
+      <div class="post-container">
+        <p>
+          <%= link_to post.user.name, "/users/#{post.user.id}", class: "post-user-name" %>
+        </p>
+        <p>
+          <%= link_to post.content, "/posts/#{post.id}", class: "text" %> 
+        </p>
+      </div>
+    </div> 
+  <% end %>
 </div>
