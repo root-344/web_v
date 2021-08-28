@@ -222,6 +222,12 @@ ul, li {
   overflow-wrap: normal;
 }
 
+.new-wrapper .show-container .show-content .post-user-name, .show-wrapper .show-container .show-content .post-user-name {
+  width: 100%;
+  height: 10%;
+  font-size: 20px;
+}
+
 .new-wrapper .show-container .show-content .post-content, .show-wrapper .show-container .show-content .post-content {
   width: 100%;
   height: 70%;
