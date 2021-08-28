@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user
+  before_action :ensure_correct_user, {only: [:edit, :update, :destroy]}
 
 
   def index
@@ -56,4 +57,14 @@ class PostsController < ApplicationController
       render("posts/edit")
     end
   end
+
+  def ensure_correct_user
+    @post = Post.find_by(id: params[:id])
+    if @post.user.id != @current_user.id
+      flash[:notice] = "あなたには出来ませんよ"
+      redirect_to("/posts/index")
+    end
+  end
+
+
 end
