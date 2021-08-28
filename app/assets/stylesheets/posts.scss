@@ -222,6 +222,12 @@ ul,li {
       background-color: blanchedalmond;
       overflow-wrap: normal;
 
+      .post-user-name {
+        width: 100%;
+        height: 10%;
+        font-size: 20px;
+      }
+
       .post-content {
         width: 100%;
         height: 70%;
