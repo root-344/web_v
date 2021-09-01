@@ -28,8 +28,6 @@ class PostsController < ApplicationController
     @users = User.all
     @post = Post.find_by(id: params[:id])
     @user = @post.user
- 
-
   end
 
   def edit
