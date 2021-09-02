@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: 'posts#index'
+
   get "login" => "users#login_form"
   post "login" => "users#login"
   post "logout" => "users#logout"
@@ -9,9 +11,11 @@ Rails.application.routes.draw do
   get 'users/index' => "users#index"
   get 'users/:id' => 'users#show'
   get "posts/index" => "posts#index"
-  root to: 'posts#index'
-  resources :posts
   post "posts/create" => "posts#create"
   post "posts/:id/update" => "posts#update"
   post "posts/:id/destroy" => "posts#destroy"
+  resources :posts do
+    resources :comments, only: :create
+  end
+    
 end
