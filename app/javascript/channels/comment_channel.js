@@ -10,10 +10,10 @@ consumer.subscriptions.create("CommentChannel", {
   },
 
   received(data) {
-    const html = `<p>${data.content.text}</p>`;
+    const html = `<p>${data.user.name}:  ${data.content.text} :  ${data.date}</p>`;
     const comments = document.getElementById('comments');
     const newComment = document.getElementById('comment_text');
-    comments.insertAdjacentHTML('afterbegin', html);
+    comments.insertAdjacentHTML('afterend', html);
     newComment.value='';
   }
 });
