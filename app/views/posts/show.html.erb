@@ -32,10 +32,16 @@
     </div>
   </div>
   <div class="comment-box">
-    <%= form_with(model: [@post, @comment]) do |form| %>
-      <%= form.text_area :text, placeholder: "コメントする", class: "text-f", rows: "2" %>
-      <%= form.submit "SEND", class: "s-btn" %>
-    <% end %> 
+    <%# <div class="cmt-f"> %>
+      <%= form_with(model: [@post, @comment], id: 'cmt-f') do |form| %>
+        <label>
+          <%= form.text_area :text, placeholder: "コメントする", class: "text-f", rows: "6" %>
+        </label>
+        <div class="s-btn">
+          <%= form.submit "SEND", class: "send" %>
+        </div>
+      <% end %> 
+    <%# </div> %>
   </div> 
-   <%= render "shared/comment" %>
+  <%= render "shared/comment" %>
 </div>
