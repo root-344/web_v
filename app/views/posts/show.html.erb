@@ -32,7 +32,6 @@
     </div>
   </div>
   <div class="comment-box">
-    <%# <div class="cmt-f"> %>
       <%= form_with(model: [@post, @comment], id: 'cmt-f') do |form| %>
         <label>
           <%= form.text_area :text, placeholder: "コメントする", class: "text-f", rows: "6" %>
@@ -41,7 +40,6 @@
           <%= form.submit "SEND", class: "send" %>
         </div>
       <% end %> 
-    <%# </div> %>
   </div> 
   <%= render "shared/comment" %>
 </div>
