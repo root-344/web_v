@@ -257,13 +257,29 @@ ul,li {
   .comment-box {
     width: 60%;
     height: 20%;
-    background-color: blanchedalmond;
     margin: 0 auto;
 
-    .text-f {
+    #cmt-f {
       width: 100%;
-      height: 70%;
+      height: 100%;
+    
 
+      .text-f {
+        width: 100%;
+        height: 70%;
+        resize: none;
+      }
+      .s-btn {
+        width: 100%;
+        height: 20%;
+        text-align: center;
+
+
+        .send {
+          width: 50%;
+          height: 100%;
+        }
+      }
     }
   }
 }

@@ -256,13 +256,29 @@ ul, li {
 .new-wrapper .comment-box, .show-wrapper .comment-box {
   width: 60%;
   height: 20%;
-  background-color: blanchedalmond;
   margin: 0 auto;
 }
 
-.new-wrapper .comment-box .text-f, .show-wrapper .comment-box .text-f {
+.new-wrapper .comment-box #cmt-f, .show-wrapper .comment-box #cmt-f {
+  width: 100%;
+  height: 100%;
+}
+
+.new-wrapper .comment-box #cmt-f .text-f, .show-wrapper .comment-box #cmt-f .text-f {
   width: 100%;
   height: 70%;
+  resize: none;
+}
+
+.new-wrapper .comment-box #cmt-f .s-btn, .show-wrapper .comment-box #cmt-f .s-btn {
+  width: 100%;
+  height: 20%;
+  text-align: center;
+}
+
+.new-wrapper .comment-box #cmt-f .s-btn .send, .show-wrapper .comment-box #cmt-f .s-btn .send {
+  width: 50%;
+  height: 100%;
 }
 
 .footer-bar {
