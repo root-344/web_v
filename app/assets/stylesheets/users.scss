@@ -27,11 +27,12 @@
     .users-container {
       width: 100%;
       height: 5%;
-      margin: 5px 0;
+      margin: 5px 0 10px;
 
       .text {
         padding-left: 5px;
-        font-size: 18px;
+        font-size: 25px;
+        text-decoration: none;
       }
     }
   }
@@ -123,15 +124,8 @@
 }
 // モーダル
 .login-modal-wrapper, .signup-modal-wrapper {
-  // display: none;
   width: 100%;
   height: 70%;
-  // position: fixed;
-  // top: 0;
-  // right: 0;
-  // bottom: 0;
-  // left: 0;
-  // background-color: rgba(0, 0, 0, 0.6);
   z-index: 100;
 }
 

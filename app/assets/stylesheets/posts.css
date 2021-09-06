@@ -31,9 +31,11 @@ ul, li {
   width: 20%;
 }
 
-.header-left #logo {
-  padding-left: 10px;
+.header-left .logo {
+  padding: 0 30px;
   color: bisque;
+  font-style: initial;
+  text-decoration: none;
 }
 
 .header-right {
@@ -50,6 +52,7 @@ ul, li {
   color: black;
   cursor: pointer;
   display: block;
+  text-decoration: none;
 }
 
 .header-right .login {
@@ -61,6 +64,7 @@ ul, li {
   color: black;
   cursor: pointer;
   display: block;
+  text-decoration: none;
 }
 
 .header-right .logout {
@@ -72,6 +76,7 @@ ul, li {
   color: black;
   cursor: pointer;
   display: block;
+  text-decoration: none;
 }
 
 .header-right .signup {
@@ -83,6 +88,7 @@ ul, li {
   color: black;
   cursor: pointer;
   display: block;
+  text-decoration: none;
 }
 
 .header-right .post-stock {
@@ -94,6 +100,7 @@ ul, li {
   color: black;
   cursor: pointer;
   display: block;
+  text-decoration: none;
 }
 
 .header-right .new-post {
@@ -105,6 +112,7 @@ ul, li {
   color: black;
   cursor: pointer;
   display: block;
+  text-decoration: none;
 }
 
 .flash {
@@ -171,10 +179,11 @@ ul, li {
   padding-top: 30px;
 }
 
-.main-wrapper .main .main-container .text {
+.main-wrapper .main .main-container .p-text {
   padding-left: 5px;
   padding-top: 50px;
   font-size: 18px;
+  text-decoration: none;
 }
 
 .new-wrapper, .show-wrapper {
@@ -233,7 +242,12 @@ ul, li {
 .new-wrapper .show-container .show-content .post-user-name, .show-wrapper .show-container .show-content .post-user-name {
   width: 100%;
   height: 10%;
-  font-size: 20px;
+  font-size: 30px;
+}
+
+.new-wrapper .show-container .show-content .post-user-name .u-name, .show-wrapper .show-container .show-content .post-user-name .u-name {
+  font-size: large;
+  text-decoration: none;
 }
 
 .new-wrapper .show-container .show-content .post-content, .show-wrapper .show-container .show-content .post-content {
