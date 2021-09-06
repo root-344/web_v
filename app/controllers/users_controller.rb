@@ -2,22 +2,20 @@ class UsersController < ApplicationController
   before_action :authenticate_user, {only: [:index, :show, :edit, :update]}
   before_action :forbid_login_user, {only: [:new, :create, :login_form, :login]}
   before_action :ensure_correct_user, {only: [:edit, :update]}
+  before_action :side_index, {except: :update}
+  
   def index
-    @users = User.all
   end
 
   def show
-    @users = User.all
     @user = User.find_by(id: params[:id])
   end
 
   def new
-    @users = User.all
     @user = User.new
   end
 
   def create
-    @users = User.all
     @user = User.new(name: params[:name], email: params[:email], password: params[:password])
     if @user.save
       session[:user_id] = @user.id
@@ -29,7 +27,6 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @users = User.all
     @user = User.find_by(id: params[:id])
   end
 
@@ -47,11 +44,9 @@ class UsersController < ApplicationController
   end
 
   def login_form
-    @users = User.all
   end
 
   def login
-    @users = User.all
     @user = User.find_by(email: params[:email], password: params[:password])
     if @user
       session[:user_id] = @user.id
@@ -66,7 +61,6 @@ class UsersController < ApplicationController
   end
 
   def logout
-    @user = User.all
     session[:user_id] = nil
     flash[:notice] = "ログアウトしました"
     redirect_to("/login")
