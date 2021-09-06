@@ -1,24 +1,13 @@
-<div class="side">
-    <div class="users-heading">ユーザー一覧</div>
-    <div class="users-containers">
-      <% @users.each do |user|%>
-        <div class="users-container">
-          <p>
-            <%= link_to user.name, "/users/#{user.id}", class: "text" %> 
-          </p>
-        </div>
-      <% end %>
-    </div>
-</div>
+<%= render "shared/index" %>
 
 <div class="main">
   <% @posts.each do |post|%>
     <div class="main-container">
       <div class="post-user-name">
-        <%= link_to post.user.name, "/users/#{post.user.id}" %>
+        <%= link_to post.user.name, "/users/#{post.user.id}", class: "u-name" %>
       </div>
       <p>
-        <%= link_to post.content, "/posts/#{post.id}", class: "text" %> 
+        <%= link_to post.content, "/posts/#{post.id}", class: "p-text" %> 
       </p>
     </div>
   <% end %>
