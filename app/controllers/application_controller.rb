@@ -18,4 +18,9 @@ before_action :set_current_user
       redirect_to("/posts/index")
     end
   end
+
+  def side_index
+    @users = User.all
+  end
+
 end

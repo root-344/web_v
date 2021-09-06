@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
+  before_action :side_index, {only: :create}
 
   def create
-    @user = User.all
     comment = Comment.new(comment_params)
     if comment.save
       ActionCable.server.broadcast 'comment_channel', content: comment, user: comment.user, date: comment.created_at

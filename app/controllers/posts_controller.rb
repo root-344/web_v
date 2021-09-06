@@ -1,20 +1,18 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user, {except: [:index]}
+  before_action :authenticate_user, {except: :index}
   before_action :ensure_correct_user, {only: [:edit, :update, :destroy]}
+  before_action :side_index, {except: [:update, :destroy]}
 
 
   def index
     @posts = Post.all
-    @users = User.all
   end
 
   def new
     @post = Post.new
-    @users = User.all
   end
 
   def create
-    @users = User.all
     @post = Post.new(content: params[:content], user_id: @current_user.id)
     if @post.save
       flash[:notice] = "投稿を作成しました。画面をクリックすると消えます。"
@@ -25,7 +23,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    @users = User.all
     @post = Post.find_by(id: params[:id])
     @user = @post.user
     @comments = @post.comments
@@ -35,7 +32,6 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find_by(id: params[:id])
-    @users = User.all
   end
 
   def update
