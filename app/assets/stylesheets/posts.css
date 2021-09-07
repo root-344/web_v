@@ -235,6 +235,7 @@ ul, li {
   width: 80%;
   height: 500px;
   padding: 10px;
+  border-radius: 10px;
   background-color: blanchedalmond;
   overflow-wrap: normal;
 }
