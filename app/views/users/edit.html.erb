@@ -9,14 +9,15 @@
                   <%= message %>
                 </div>
               <% end %>
-          <%= form_tag("/users/#{@user.id}/update/", {method: "post"}) do %>
+          <%= form_with url: "/users/#{@user.id}/update/", local: true do |form|%>
               <P class="user-states">ユーザー名</p>
-              <input name="name" type="text" class="form-control" value="<%= @user.name %>">
+              <%= form.text_field :name, class: "form-control", value:"#{@user.name}" %>
               <P class="user-states">メールアドレス</p>
-              <input name="email" type="text" class="form-control" value="<%= @user.email %>">
+              <%= form.email_field :email, class: "form-control", value:"#{@user.email}" %>
               <p class="user-states">パスワード</p>
-              <input name="password" type="password" class="form-control" value="<%= @user.password %>">
-              <input type="submit" value="投稿" class="p-btn">
+              <%= form.password_field :password, class: "form-control", value:"#{@user.password}" %>
+              <%= form.submit "変更する", class: "p-btn" %>
+
           <% end %>
         </div>
       </div>

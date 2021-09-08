@@ -13,10 +13,10 @@
             <%= @error_message %>
           </div>
         <% end %>
-          <%= form_tag("/login") do %>
-          <input name="email" class="form-control" type="text" placeholder="メールアドレス" value="<%= @email %>" >
-          <input name="password" class="form-control" type="password" placeholder="パスワード" value="<%= @password %>" >
-          <input type="submit" value="ログイン" id="submit-btn">
+          <%= form_with url: "/login", local: true do |form| %>
+            <%= form.email_field :email, class: "form-control", placeholder: "メールアドレス", value:"#{@user.email}" %>
+            <%= form.password_field :password, class: "form-control", placeholder: "パスワード", value:"#{@user.password}" %>
+            <%= form.submit "ログイン", id: "submit-btn" %>
           <% end %>
       </div>
     </div>
