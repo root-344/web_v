@@ -13,7 +13,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(content: params[:content], user_id: @current_user.id)
+    @post = Post.new(team_name: params[:team_name], genre_id: params[:genre_id], date: params[:date], content: params[:content], user_id: @current_user.id)
     if @post.save
       flash[:notice] = "投稿を作成しました。画面をクリックすると消えます。"
       redirect_to("/posts/index")
