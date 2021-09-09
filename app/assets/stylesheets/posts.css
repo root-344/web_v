@@ -198,11 +198,12 @@ ul, li {
   text-align: center;
   padding-top: 40px;
   font-size: 30px;
+  color: beige;
 }
 
 .new-wrapper .form, .show-wrapper .form {
   width: 100%;
-  height: 500px;
+  height: calc(100% - 150px);
 }
 
 .new-wrapper .form .form-body, .show-wrapper .form .form-body {
@@ -211,16 +212,44 @@ ul, li {
   text-align: center;
 }
 
-.new-wrapper .form .form-body .content-area, .show-wrapper .form .form-body .content-area {
+.new-wrapper .form .form-body .t-n, .show-wrapper .form .form-body .t-n {
+  width: 40%;
+  height: 20%;
+  margin: 0 auto;
+}
+
+.new-wrapper .form .form-body .genre, .show-wrapper .form .form-body .genre {
+  width: 10%;
+  height: 20%;
+  margin: 10px auto 0;
+}
+
+.new-wrapper .form .form-body .date, .show-wrapper .form .form-body .date {
+  width: 15%;
+  height: 20%;
+  margin: 10px auto 0;
+}
+
+.new-wrapper .form .form-body .p-content, .show-wrapper .form .form-body .p-content {
   width: 90%;
-  height: 60%;
+  height: 40%;
+  margin: 10px auto 0;
+}
+
+.new-wrapper .form .form-body .f-word, .show-wrapper .form .form-body .f-word {
+  color: beige;
 }
 
 .new-wrapper .form .form-body .p-btn, .show-wrapper .form .form-body .p-btn {
-  width: 10%;
-  height: 10%;
-  margin-top: 20px;
-  font-size: 20px;
+  width: 20%;
+  height: 20%;
+  margin: 10px auto 30px;
+}
+
+.new-wrapper .form .form-body .p-btn .send, .show-wrapper .form .form-body .p-btn .send {
+  width: 100%;
+  height: 100%;
+  font-size: 25px;
 }
 
 .new-wrapper .show-container, .show-wrapper .show-container {
@@ -251,9 +280,27 @@ ul, li {
   text-decoration: none;
 }
 
+.new-wrapper .show-container .show-content .post-team, .show-wrapper .show-container .show-content .post-team {
+  width: 100%;
+  height: 10%;
+  font-size: 20px;
+}
+
+.new-wrapper .show-container .show-content .post-area, .show-wrapper .show-container .show-content .post-area {
+  width: 100%;
+  height: 10%;
+  font-size: 20px;
+}
+
+.new-wrapper .show-container .show-content .post-date, .show-wrapper .show-container .show-content .post-date {
+  width: 100%;
+  height: 10%;
+  font-size: 20px;
+}
+
 .new-wrapper .show-container .show-content .post-content, .show-wrapper .show-container .show-content .post-content {
   width: 100%;
-  height: 70%;
+  height: 40%;
   font-size: 20px;
 }
 
@@ -305,6 +352,8 @@ ul, li {
 
 .footer-bar {
   height: 10%;
+  text-align: center;
   border: 1px solid black;
   background-color: rgba(0, 0, 0, 0.6);
+  color: beige;
 }
