@@ -10,6 +10,9 @@
               <%= message %>
             </div>
           <% end %>
+          <%= form.text_field :team_name, class: "t-n", value: "#{@post.team_name}" %>
+          <%= form.collection_select(:genre_id, Genre.all, :id, :name, {}, {class: "genre"}) %>
+          <%= form.datetime_field :date, {include_blank: true} %>
           <%= form.text_area :content, class: "content-area", value: "#{@post.content}" %>
           <%= form.submit "SEND", value: "投稿", class: "p-btn" %>
         </div>
