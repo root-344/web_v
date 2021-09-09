@@ -10,11 +10,25 @@
               <%= message %>
             </div>
           <% end %>
-          <%= form.text_field :team_name, class: "t-n", value: "#{@post.team_name}" %>
-          <%= form.collection_select(:genre_id, Genre.all, :id, :name, {}, {class: "genre"}) %>
-          <%= form.datetime_field :date, {include_blank: true} %>
-          <%= form.text_area :content, class: "content-area", value: "#{@post.content}" %>
-          <%= form.submit "SEND", value: "投稿", class: "p-btn" %>
+          <div class="t-form">
+            <h3 class="f-word">チーム名</h3>
+            <%= form.text_field :team_name, class: "t-n", value: "#{@post.team_name}" %>
+          </div>
+          <div class="genre">
+            <h3 class="f-word">開催地域</h3>
+            <%= form.collection_select(:genre_id, Genre.all, :id, :name, {}) %>
+          </div>
+          <div class="date">
+            <h3 class="f-word">開催日時</h3>
+            <%= form.datetime_field :date, {include_blank: true}%>
+          </div>
+          <div class="p-content">
+            <h3 class="f-word">詳細</h3>
+            <%= form.text_area :content, class: "content-area", value: "#{@post.content}", rows: "10", cols: "100" %>
+          </div>
+          <div class="p-btn">
+            <%= form.submit "SEND", value: "投稿", class: "send" %>
+          </div>
         </div>
       </div>
     <% end %>

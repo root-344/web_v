@@ -3,10 +3,18 @@
 <div class="show-wrapper">
   <div class="show-container">
     <div class="show-content">
-      <p class="post-content">
-        <%= @post.content %>
+      <p class="post-team">
+         チーム名： <%= @post.team_name %>
       </p>
-      
+      <p class="post-area">
+        開催地域： <%= @post.genre.name %>
+      </p>
+      <p class="post-date">
+        開催日時： <%= @post.date %>
+      </p>
+      <p class="post-content">
+        詳細： <%= @post.content %>
+      </p>
       <div class="post-time">
         <%= @post.created_at %>
       </div>
