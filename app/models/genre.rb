@@ -49,4 +49,7 @@ class Genre < ActiveHash::Base
     { id: 47, name: '鹿児島' },
     { id: 48, name: '沖縄' },
   ]
+
+  include ActiveHash::Associations
+  has_many :posts
 end
