@@ -16,7 +16,13 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(name: params[:name], email: params[:email], password: params[:password])
+    @user = User.new(first_name: params[:first_name], 
+                     last_name: params[:last_name], 
+                     first_name_kana: params[:first_name_kana], 
+                     last_name_kana: params[:last_name_kana], 
+                     nickname: [:nickname], 
+                     email: params[:email], 
+                     password: params[:password])
     if @user.save
       session[:user_id] = @user.id
       flash[:notice] = "新規登録完了しました"
@@ -32,7 +38,11 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find_by(id: params[:id])
-    @user.name = params[:name]
+    @user.first_name = params[:first_name]
+    @user.last_name = params[:last_name]
+    @user.first_name_kana = params[:first_name_kana]
+    @user.last_name_kana = params[:last_name_kana]
+    @user.nickname = params[:nickname]
     @user.email = params[:email]
     @user.password = params[:password]
     if @user.save
