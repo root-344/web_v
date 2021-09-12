@@ -20,7 +20,7 @@ class UsersController < ApplicationController
                      last_name: params[:last_name], 
                      first_name_kana: params[:first_name_kana], 
                      last_name_kana: params[:last_name_kana], 
-                     nickname: [:nickname], 
+                     nickname: params[:nickname], 
                      email: params[:email], 
                      password: params[:password])
     if @user.save
@@ -38,10 +38,6 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find_by(id: params[:id])
-    @user.first_name = params[:first_name]
-    @user.last_name = params[:last_name]
-    @user.first_name_kana = params[:first_name_kana]
-    @user.last_name_kana = params[:last_name_kana]
     @user.nickname = params[:nickname]
     @user.email = params[:email]
     @user.password = params[:password]
