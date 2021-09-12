@@ -4,7 +4,7 @@
   <% @posts.each do |post|%>
     <div class="main-container">
       <div class="post-user-name">
-        <%= link_to post.user.name, "/users/#{post.user.id}", class: "u-name" %>
+        <%= link_to post.user.nickname, "/users/#{post.user.id}", class: "u-name" %>
       </div>
       <p>
         <%= link_to post.content, "/posts/#{post.id}", class: "p-text" %> 

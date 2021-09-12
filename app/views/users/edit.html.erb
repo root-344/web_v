@@ -11,7 +11,7 @@
               <% end %>
           <%= form_with url: "/users/#{@user.id}/update/", local: true do |form|%>
               <P class="user-states">ユーザー名</p>
-              <%= form.text_field :name, class: "form-control", value:"#{@user.name}" %>
+              <%= form.text_field :nickname, class: "form-control", value:"#{@user.nickname}" %>
               <P class="user-states">メールアドレス</p>
               <%= form.email_field :email, class: "form-control", value:"#{@user.email}" %>
               <p class="user-states">パスワード</p>

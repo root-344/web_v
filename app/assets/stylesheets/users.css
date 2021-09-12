@@ -117,7 +117,7 @@
 
 .login-modal-wrapper, .signup-modal-wrapper {
   width: 100%;
-  height: 70%;
+  height: 100%;
   z-index: 100;
 }
 
@@ -129,7 +129,20 @@
   padding: 20px 0 40px;
   border-radius: 10px;
   width: 450px;
-  height: auto;
+  height: 600px;
+  text-align: center;
+  overflow: auto;
+}
+
+.login-modal {
+  position: absolute;
+  top: 20%;
+  left: 34%;
+  background-color: lightgoldenrodyellow;
+  padding: 20px 0 40px;
+  border-radius: 10px;
+  width: 450px;
+  height: 300px;
   text-align: center;
 }
 
@@ -143,12 +156,21 @@
 
 #signup-form, #login-form {
   width: 100%;
+  height: 100%;
 }
 
-#signup-form h2, #login-form h2 {
-  color: #5f5d60;
-  letter-spacing: 1px;
-  margin-bottom: 40px;
+.f-n-f, .l-n-f, .f-n-k-f, .l-n-k-f, .nickname-f, .email-f, .password-f {
+  width: 60%;
+  height: calc(100% / 12);
+  margin: 10px auto 0;
+  font-size: 20px;
+  text-align: left;
+}
+
+.s-form-control {
+  width: 100%;
+  height: calc(100% / 12);
+  margin: 10px auto 0;
 }
 
 #signup-form input, #login-form input {
