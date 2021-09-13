@@ -1,37 +1,35 @@
 <%= render "shared/index" %>
 
 <div class="new-wrapper">
-    <h1 class="form-heading">編集する</h1>
-    <%= form_with url: "/posts/#{@post.id}/update/", local: true do |form|%>
-      <div class="form">
-        <div class="form-body">
-          <% @post.errors.full_messages.each do |message| %>
-            <div class="form-error">
-              <%= message %>
-            </div>
-          <% end %>
-          <div class="t-form">
-            <h3 class="f-word">チーム名</h3>
-            <%= form.text_field :team_name, class: "t-n", value: "#{@post.team_name}" %>
+  <h1 class="form-heading">編集する</h1>
+  <%= form_with url: "/posts/#{@post.id}/update/", local: true do |form|%>
+    <div class="form">
+      <div class="form-body">
+        <% @post.errors.full_messages.each do |message| %>
+          <div class="form-error">
+            <%= message %>
           </div>
-          <div class="genre">
-            <h3 class="f-word">開催地域</h3>
-            <%= form.collection_select(:genre_id, Genre.all, :id, :name, {}) %>
-          </div>
-          <div class="date">
-            <h3 class="f-word">開催日時</h3>
-            <%= form.datetime_field :date, {include_blank: true}%>
-          </div>
-          <div class="p-content">
-            <h3 class="f-word">詳細</h3>
-            <%= form.text_area :content, class: "content-area", value: "#{@post.content}", rows: "10", cols: "100" %>
-          </div>
-          <div class="p-btn">
-            <%= form.submit "SEND", value: "変更", class: "send" %>
-          </div>
+        <% end %>
+        <div class="t-form">
+          <h3 class="f-word">チーム名</h3>
+          <%= form.text_field :team_name, class: "t-n", value: "#{@post.team_name}" %>
+        </div>
+        <div class="genre">
+          <h3 class="f-word">開催地域</h3>
+          <%= form.collection_select(:genre_id, Genre.all, :id, :name, {}) %>
+        </div>
+        <div class="date">
+          <h3 class="f-word">開催日時</h3>
+          <%= form.datetime_field :date, {include_blank: true}%>
+        </div>
+        <div class="p-content">
+          <h3 class="f-word">詳細</h3>
+          <%= form.text_area :content, class: "content-area", value: "#{@post.content}", rows: "10", cols: "100" %>
+        </div>
+        <div class="p-btn">
+          <%= form.submit "SEND", value: "変更", class: "send" %>
         </div>
       </div>
-    <% end %>
-
-
+    </div>
+  <% end %>
 </div>
