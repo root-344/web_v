@@ -115,16 +115,35 @@
   font-size: 20px;
 }
 
-.login-modal-wrapper, .signup-modal-wrapper {
+.main {
+  width: 80%;
+  height: 100%;
+  overflow: auto;
+}
+
+.main .login-modal-wrapper, .main .signup-modal-wrapper {
   width: 100%;
   height: 100%;
   z-index: 100;
 }
 
-.modal {
+.main .login-modal-wrapper .user-form-error, .main .signup-modal-wrapper .user-form-error {
+  width: 80%;
+  height: 15vh;
+  padding: 10px 0;
+  color: white;
+  background: rgba(251, 170, 88, 0.7);
+  text-align: center;
   position: absolute;
-  top: 20%;
-  left: 34%;
+  top: 70px;
+  border-radius: 0 0 2px 2px;
+  font-size: 17px;
+}
+
+.main .login-modal-wrapper .modal, .main .signup-modal-wrapper .modal {
+  position: absolute;
+  top: 40%;
+  left: 30%;
   background-color: lightgoldenrodyellow;
   padding: 20px 0 40px;
   border-radius: 10px;
@@ -134,9 +153,9 @@
   overflow: auto;
 }
 
-.login-modal {
+.main .login-modal-wrapper .login-modal, .main .signup-modal-wrapper .login-modal {
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 34%;
   background-color: lightgoldenrodyellow;
   padding: 20px 0 40px;
@@ -146,7 +165,7 @@
   text-align: center;
 }
 
-.fa-times {
+.main .login-modal-wrapper .fa-times, .main .signup-modal-wrapper .fa-times {
   position: absolute;
   top: 12px;
   right: 12px;
@@ -154,12 +173,12 @@
   cursor: pointer;
 }
 
-#signup-form, #login-form {
+.main .login-modal-wrapper #signup-form, .main .login-modal-wrapper #login-form, .main .signup-modal-wrapper #signup-form, .main .signup-modal-wrapper #login-form {
   width: 100%;
   height: 100%;
 }
 
-.f-n-f, .l-n-f, .f-n-k-f, .l-n-k-f, .nickname-f, .email-f, .password-f {
+.main .login-modal-wrapper .f-n-f, .main .login-modal-wrapper .l-n-f, .main .login-modal-wrapper .f-n-k-f, .main .login-modal-wrapper .l-n-k-f, .main .login-modal-wrapper .nickname-f, .main .login-modal-wrapper .email-f, .main .login-modal-wrapper .password-f, .main .signup-modal-wrapper .f-n-f, .main .signup-modal-wrapper .l-n-f, .main .signup-modal-wrapper .f-n-k-f, .main .signup-modal-wrapper .l-n-k-f, .main .signup-modal-wrapper .nickname-f, .main .signup-modal-wrapper .email-f, .main .signup-modal-wrapper .password-f {
   width: 60%;
   height: calc(100% / 12);
   margin: 10px auto 0;
@@ -167,13 +186,13 @@
   text-align: left;
 }
 
-.s-form-control {
+.main .login-modal-wrapper .s-form-control, .main .signup-modal-wrapper .s-form-control {
   width: 100%;
   height: calc(100% / 12);
   margin: 10px auto 0;
 }
 
-#signup-form input, #login-form input {
+.main .login-modal-wrapper #signup-form input, .main .login-modal-wrapper #login-form input, .main .signup-modal-wrapper #signup-form input, .main .signup-modal-wrapper #login-form input {
   width: 320px;
   margin-bottom: 20px;
   font-size: 12px;
@@ -182,7 +201,7 @@
   border-radius: 5px;
 }
 
-#submit-btn {
+.main .login-modal-wrapper #submit-btn, .main .signup-modal-wrapper #submit-btn {
   display: inline-block;
   padding: 14px 140px;
   background-color: #5dca88;
@@ -193,19 +212,6 @@
   cursor: pointer;
 }
 
-.fa {
+.main .login-modal-wrapper .fa, .main .signup-modal-wrapper .fa {
   margin-right: 5px;
-}
-
-.user-form-error {
-  width: 100%;
-  height: 5vh;
-  padding: 10px 0;
-  color: white;
-  background: rgba(251, 170, 88, 0.7);
-  text-align: center;
-  position: absolute;
-  top: 70px;
-  border-radius: 0 0 2px 2px;
-  font-size: 17px;
 }

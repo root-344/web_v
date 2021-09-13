@@ -2,20 +2,20 @@
 
 <div class="main">
   <div class="login-modal-wrapper" id="login-modal">
+    <% if @error_message %>
+      <div class="user-form-error">
+        <%= @error_message %>
+      </div>
+    <% end %>
     <div class="login-modal">
       <div class="close-modal">
         <i class="fa fa-2x fa-times">X</i>
       </div>
       <div id="login-form">
         <h2>ログイン</h2>
-        <% if @error_message %>
-          <div class="user-form-error">
-            <%= @error_message %>
-          </div>
-        <% end %>
           <%= form_with url: "/login", local: true do |form| %>
-            <%= form.email_field :email, class: "form-control", placeholder: "メールアドレス", value:"#{@user.email}" %>
-            <%= form.password_field :password, class: "form-control", placeholder: "パスワード", value:"#{@user.password}" %>
+            <%= form.email_field :email, class: "form-control", placeholder: "メールアドレス" %>
+            <%= form.password_field :password, class: "form-control", placeholder: "パスワード" %>
             <%= form.submit "ログイン", id: "submit-btn" %>
           <% end %>
       </div>

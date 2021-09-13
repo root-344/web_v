@@ -2,17 +2,17 @@
 
 <div class="main">
   <div class="signup-modal-wrapper" id="signup-modal">
+    <% @user.errors.full_messages.each do |message| %>
+      <div class="user-form-error">
+        <%= message %>
+      </div>
+    <% end %>
     <div class="modal">
       <div class="close-modal">
         <i class="fa fa-2x fa-times">X</i>
       </div>
       <div id="signup-form">
         <h2>新規登録</h2>
-        <% @user.errors.full_messages.each do |message| %>
-          <div class="form-error">
-            <%= message %>
-          </div>
-        <% end %>
         <%= form_with url: "/users/create", local: true do |form| %>
           <p class="f-n-f">姓(漢字)</p>
             <%= form.text_field :first_name, class: "s-form-control", placeholder: "例）山田", value:"#{@user.first_name}" %>
