@@ -2,4 +2,15 @@ ja:
   activerecord:
     attributes:
       post:
+        team_name: チーム名
+        genre_id: 開催地域
+        date: 開催日時
         content: 投稿内容
+      user:
+        first_name: 名前(姓)
+        last_name: 名前(姓)
+        first_name_kana: 名前(カナ)
+        last_name_kana: 名前(カナ)
+        nickname: ニックネーム
+        email: メールアドレス
+        password: パスワード
