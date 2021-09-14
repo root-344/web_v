@@ -81,8 +81,20 @@
     width: 100%;
     height: 150px;
     text-align: center;
+    color: beige;
     padding-top: 40px;
     font-size: 30px;
+  } 
+
+  .user-edit-error {
+    width: 100%;
+    height: 10%;
+    padding: 15px 0 0 15px;
+    color: white;
+    text-align: center;
+    border-radius: 0 0 2px 2px;
+    font-size: 15px;
+    flex-wrap: wrap;
   }
 
   .edit-form {
@@ -131,29 +143,34 @@
   .login-modal-wrapper, .signup-modal-wrapper {
     width: 100%;
     height: 100%;
-    z-index: 100;
+
+    .alert {
+      width: 30%;
+      height: 100%;
+      position: absolute;
+      top: 20%;
+    }
     
     .user-form-error {
-      width: 80%;
-      height: 15vh;
-      padding: 10px 0;
+      width: 100%;
+      height: 10%;
+      padding: 15px 0 0 15px;
       color: white;
-      background: rgba(251, 170, 88, 0.7);
-      text-align: center;
-      position: absolute;
-      top: 70px;
+      text-align: justify;
       border-radius: 0 0 2px 2px;
-      font-size: 17px;
+      font-size: 10px;
+      flex-wrap: wrap;
     }
     
     .modal {
       position: absolute;
-      top: 40%;
-      left: 30%;
+      top: 20%;
+      left: 50%;
       background-color: lightgoldenrodyellow;
       padding: 20px 0 40px;
       border-radius: 10px;
       width: 450px;
+      max-width: 45%;
       height: 600px;
       text-align: center;
       overflow: auto;

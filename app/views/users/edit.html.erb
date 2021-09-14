@@ -2,13 +2,19 @@
 
 <div class="user-edit-wrapper">
     <h1 class="edit-form-heading">編集する</h1>
+    <% if @user.errors.any? %>
+      <div class="alert">
+        <ul>
+          <% @user.errors.full_messages.each do |message| %>
+            <div class="user-edit-error">
+            <li><%= message %></li>
+            </div>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
       <div class="edit-form">
         <div class="edit-form-body">
-              <% @user.errors.full_messages.each do |message| %>
-                <div class="form-error">
-                  <%= message %>
-                </div>
-              <% end %>
           <%= form_with url: "/users/#{@user.id}/update/", local: true do |form|%>
               <P class="user-states">ユーザー名</p>
               <%= form.text_field :nickname, class: "form-control", value:"#{@user.nickname}" %>

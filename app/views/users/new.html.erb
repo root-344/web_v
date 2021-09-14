@@ -2,9 +2,15 @@
 
 <div class="main">
   <div class="signup-modal-wrapper" id="signup-modal">
-    <% @user.errors.full_messages.each do |message| %>
-      <div class="user-form-error">
-        <%= message %>
+    <% if @user.errors.any? %>
+      <div class="alert">
+        <ul>
+          <% @user.errors.full_messages.each do |message| %>
+            <div class="user-form-error">
+            <li><%= message %></li>
+            </div>
+          <% end %>
+        </ul>
       </div>
     <% end %>
     <div class="modal">
