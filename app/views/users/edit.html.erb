@@ -3,7 +3,6 @@
 <div class="user-edit-wrapper">
     <h1 class="edit-form-heading">編集する</h1>
     <% if @user.errors.any? %>
-      <div class="alert">
         <ul>
           <% @user.errors.full_messages.each do |message| %>
             <div class="user-edit-error">
@@ -11,7 +10,6 @@
             </div>
           <% end %>
         </ul>
-      </div>
     <% end %>
       <div class="edit-form">
         <div class="edit-form-body">

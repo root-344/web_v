@@ -5,10 +5,14 @@
   <%= form_with url: "/posts/#{@post.id}/update/", local: true do |form|%>
     <div class="form">
       <div class="form-body">
-        <% @post.errors.full_messages.each do |message| %>
-          <div class="form-error">
-            <%= message %>
-          </div>
+        <% if @post.errors.any? %>
+            <ul>
+              <% @post.errors.full_messages.each do |message| %>
+                <div class="post-form-error">
+                <li><%= message %></li>
+                </div>
+              <% end %>
+            </ul>
         <% end %>
         <div class="t-form">
           <h3 class="f-word">チーム名</h3>
