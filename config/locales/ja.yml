@@ -5,7 +5,7 @@ ja:
         team_name: チーム名
         genre_id: 開催地域
         date: 開催日時
-        content: 投稿内容
+        content: 詳細
       user:
         first_name: 名前(姓)
         last_name: 名前(姓)
