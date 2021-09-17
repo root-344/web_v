@@ -150,6 +150,7 @@
   color: white;
   text-align: center;
   font-size: 10px;
+  list-style: none;
 }
 
 .main .login-modal-wrapper .login-form-error, .main .signup-modal-wrapper .login-form-error {

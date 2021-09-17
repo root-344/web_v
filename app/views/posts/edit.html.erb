@@ -5,15 +5,9 @@
   <%= form_with url: "/posts/#{@post.id}/update/", local: true do |form|%>
     <div class="form">
       <div class="form-body">
-        <% if @post.errors.any? %>
-            <ul>
-              <% @post.errors.full_messages.each do |message| %>
-                <div class="post-form-error">
-                <li><%= message %></li>
-                </div>
-              <% end %>
-            </ul>
-        <% end %>
+
+         <%= render "shared/error" %>
+
         <div class="t-form">
           <h3 class="f-word">チーム名</h3>
           <%= form.text_field :team_name, class: "t-n", value: "#{@post.team_name}" %>
