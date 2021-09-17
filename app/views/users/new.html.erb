@@ -21,19 +21,19 @@
         <h2>新規登録</h2>
         <%= form_with url: "/users/create", local: true do |form| %>
           <p class="f-n-f">姓(漢字)</p>
-            <%= form.text_field :first_name, class: "s-form-control", placeholder: "例）山田", value:"#{@user.first_name}" %>
+            <%= form.text_field :first_name, class: "s-form-control", placeholder: "例）山田" %>
           <p class="l-n-f">名(漢字)</p>
-            <%= form.text_field :last_name, class: "s-form-control", placeholder: "例）太郎", value:"#{@user.last_name}" %>
+            <%= form.text_field :last_name, class: "s-form-control", placeholder: "例）太郎" %>
           <p class="f-n-k-f">姓(カナ)</p>
-            <%= form.text_field :first_name_kana, class: "s-form-control", placeholder: "ヤマダ", value:"#{@user.first_name_kana}" %>
+            <%= form.text_field :first_name_kana, class: "s-form-control", placeholder: "ヤマダ" %>
           <p class="l-n-k-f">名(カナ)</p>
-            <%= form.text_field :last_name_kana, class: "s-form-control", placeholder: "タロウ", value:"#{@user.last_name_kana}" %>
+            <%= form.text_field :last_name_kana, class: "s-form-control", placeholder: "タロウ" %>
           <p class="nickname-f">ニックネーム(表示名)</p>
-            <%= form.text_field :nickname, class: "s-form-control", placeholder: "ご自由にどうぞ", value:"#{@user.nickname}" %>
+            <%= form.text_field :nickname, class: "s-form-control", placeholder: "ご自由にどうぞ" %>
           <p class="email-f">メールアドレス</p>
-            <%= form.email_field :email, class: "s-form-control", placeholder: "メールアドレス", value:"#{@user.email}" %>
+            <%= form.email_field :email, class: "s-form-control", placeholder: "メールアドレス" %>
           <p class="password-f">パスワード(8文字以上)</p>
-            <%= form.password_field :password, class: "s-form-control", placeholder: "パスワード", value:"#{@user.password}" %>
+            <%= form.password_field :password, class: "s-form-control", placeholder: "パスワード" %>
             <%= form.submit "新規登録", id: "submit-btn" %>
         <% end %>
       </div>
