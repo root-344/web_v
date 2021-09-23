@@ -8,9 +8,9 @@ ja:
         content: 詳細
       user:
         first_name: 名前(姓)
-        last_name: 名前(姓)
-        first_name_kana: 名前(カナ)
-        last_name_kana: 名前(カナ)
+        last_name: 名前(名)
+        first_name_kana: 姓(カナ)
+        last_name_kana: 名(カナ)
         nickname: ニックネーム
         email: メールアドレス
         password: パスワード
