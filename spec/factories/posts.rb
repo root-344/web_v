@@ -4,6 +4,13 @@ FactoryBot.define do
     genre_id    {2}
     date        {"2021/12/11 10:00"}
     content     { "testtesttest"}
-    association :user
+
+    # アソシエーション
+    user
+    trait :user_with_users do
+      after(:build) do |post|
+      end
+    end
+
   end
 end

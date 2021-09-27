@@ -8,5 +8,10 @@ FactoryBot.define do
     nickname              { Faker::Name.name }
     email                 { Faker::Internet.unique.free_email }
     password              { 'a1' + Faker::Internet.password }
+
+    trait :user_with_posts do
+      after(:build) do |user|
+      end
+    end
   end
 end
