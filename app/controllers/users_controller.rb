@@ -25,8 +25,8 @@ class UsersController < ApplicationController
                      password: params[:password])
     if @user.save
       session[:user_id] = @user.id
-      flash[:notice] = "新規登録完了しました"
-      redirect_to("/users/#{@user.id}")
+      flash[:notice] = "登録完了しました"
+      redirect_to("/posts/index")
     else
       render("/users/new")
     end
