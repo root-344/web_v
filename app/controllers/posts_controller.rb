@@ -35,6 +35,9 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find_by(id: params[:id])
+    @post.team_name = params[:team_name]
+    @post.genre_id = params[:genre_id]
+    @post.date = params[:date]
     @post.content = params[:content]
     if @post.save
       flash[:notice] = "内容を変更しました。画面をクリックすると消えます。"
