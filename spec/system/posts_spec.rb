@@ -261,3 +261,47 @@ RSpec.describe "投稿削除", type: :system do
     end
   end
 end
+RSpec.describe "投稿詳細", type: :system do
+  before do
+    @post = FactoryBot.create(:post, content: 'test')
+  end
+  context '投稿詳細ページを表示できる場合' do
+    it 'ログインしたユーザーは投稿詳細ページに移動してコメント投稿欄が表示される' do
+      # ログインする
+        # ユーザー作成
+        @user = FactoryBot.create(:user)
+        # ログインページに移動する
+        visit login_path
+        # 情報を入力する
+        fill_in 'email', with: @post.user.email
+        fill_in 'password', with: @post.user.password
+        # ログインボタンを押せばログインでき投稿一覧ページに移動する
+        find('input[name="commit"]').click 
+        expect(current_path).to eq(posts_index_path)
+        # ログインしましたと表示される事を確認する
+        expect(page).to have_content('ログインしました')       
+      # 投稿内容をクリックして投稿詳細ページに移動する
+      click_on("test")
+      expect(current_path).to eq post_path(@post)
+      # 詳細ページに投稿内容が存在する
+      expect(page).to have_content("#{@post.team_name}")
+      expect(page).to have_content("#{@post.genre_id}")
+      expect(page).to have_content("#{@post.date}")
+      expect(page).to have_content("#{@post.content}")
+      expect(page).to have_content("#{@post.created_at}")
+      # コメントフォームが存在する
+      expect(page).to have_selector 'form'
+    end
+  end
+  context '投稿詳細ページを表示できない場合' do
+    it 'ログインしなければ投稿詳細ページに移動できずにログインページに移動する' do
+      # トップページに移動する
+      visit root_path
+      # 投稿詳細ページに移動できずログインページに移動する
+      click_on("test")
+      expect(current_path).to eq('/login')
+      # ログインが必要ですが表示される事を確認する
+      expect(page).to have_content('ログインが必要です')
+    end
+  end
+end
