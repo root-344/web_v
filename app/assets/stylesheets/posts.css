@@ -330,7 +330,7 @@ ul, li {
 .new-wrapper .comment-box, .show-wrapper .comment-box {
   width: 60%;
   height: 20%;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .new-wrapper .comment-box #cmt-f, .show-wrapper .comment-box #cmt-f {
